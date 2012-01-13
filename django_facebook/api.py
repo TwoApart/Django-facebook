@@ -87,7 +87,7 @@ def get_facebook_graph(request=None, access_token=None, redirect_uri=None):
             cookie_name = 'fbsr_%s' % facebook_settings.FACEBOOK_APP_ID
             cookie_data = request.COOKIES.get(cookie_name)
 
-            if cookie_data:
+            if cookie_data and not signed_data:
                 signed_data = cookie_data
                 #the javascript api assumes a redirect uri of ''
                 redirect_uri = ''
