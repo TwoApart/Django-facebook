@@ -20,6 +20,16 @@ bulkloader-*
 .settings/
 .settings
 
+# Ignore egg stuff
+*.egg-info
+MANIFEST
+
+# Ignore Idea project stuff
+.idea
+
+# Ignore mac stuff
+.DS_Store
+
 #app specific
 facebook_example/django_fb_test
 
